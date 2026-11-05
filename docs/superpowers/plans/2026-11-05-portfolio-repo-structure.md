@@ -44,7 +44,7 @@
 
 - [ ] **Step 1: 執行 AC1 檢查**
 
-Run: `cd /c/Users/Play/Documents/GitHub/aboutjob10062-crypto && for f in README.md LICENSE .gitignore index.html works templates; do test -e "$f" || echo MISSING $f; done; ls works | tr '\n' ' '`
+Run: `cd <repo root> && for f in README.md LICENSE .gitignore index.html works templates; do test -e "$f" || echo MISSING $f; done; ls works | tr '\n' ' '`
 Expected: 沒有 `MISSING`；最後一行 `music research web-apps websites `
 
 - [ ] **Step 2: 執行 AC2 檢查與 `git add .` 試跑（Review Focus 5）**
