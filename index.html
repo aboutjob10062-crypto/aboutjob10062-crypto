@@ -123,6 +123,19 @@
   .btn--ghost { background: transparent; color: var(--on-dark); border: 2px solid var(--on-dark); }
   .btn--ghost:hover { background: transparent; opacity: .8; }
 
+  /* Light / dark toggle in the corner of the positioning column */
+  .toggle {
+    position: absolute; top: var(--pad); right: var(--pad);
+    display: inline-flex; align-items: center; gap: 8px;
+    min-height: 44px; padding: 0 14px;
+    background: none; border: 1px solid var(--on-dark); color: var(--on-dark);
+    font: 500 var(--step-small)/1 var(--font); cursor: pointer;
+    transition: opacity .2s var(--ease), transform .2s var(--ease);
+  }
+  .toggle:hover { opacity: .7; }
+  .toggle:active { transform: scale(.94); }
+  .toggle svg { width: 18px; height: 18px; flex: none; }
+
   /* ===== Home: positioning column fixed on the left, category list reads on the right ===== */
   .home { display: grid; grid-template-columns: minmax(300px, 38%) 1fr; min-height: 100svh; }
   .home__panel {
@@ -166,6 +179,11 @@
 <a class="skip" href="#cats">跳到分類清單</a>
 <div class="home">
   <aside class="home__panel">
+    <button class="toggle" type="button" data-theme-toggle hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true" data-icon="moon"><path d="M20.5 14.2A8.5 8.5 0 1 1 9.8 3.5a7 7 0 0 0 10.7 10.7z" fill="currentColor"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true" data-icon="sun" hidden><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span data-theme-text>深色</span>
+    </button>
     <img class="home__photo" src="about/images/willy.jpg" width="800" height="800" alt="廖煒立（Willy Liao）的大頭照：穿深灰色西裝外套與深藍色襯衫，站在灰色背景前" fetchpriority="high">
     <div class="home__id">
       <h1>廖煒立 <span lang="en">Willy Liao</span></h1>
@@ -232,5 +250,30 @@
     </ul>
   </main>
 </div>
+<script>
+(() => {
+  // Light / dark palette: the system choice until the visitor picks one, then remembered (same key as about/)
+  const root = document.documentElement;
+  const themeBtn = document.querySelector('[data-theme-toggle]');
+  const themeText = themeBtn.querySelector('[data-theme-text]');
+  const systemDark = matchMedia('(prefers-color-scheme: dark)');
+  const isDark = () => root.dataset.theme ? root.dataset.theme === 'dark' : systemDark.matches;
+  const showTheme = () => {
+    const dark = isDark();
+    themeText.textContent = dark ? '淺色' : '深色';
+    themeBtn.setAttribute('aria-label', dark ? '切換為淺色配色' : '切換為深色配色');
+    themeBtn.querySelector('[data-icon="moon"]').hidden = dark;
+    themeBtn.querySelector('[data-icon="sun"]').hidden = !dark;
+  };
+  themeBtn.addEventListener('click', () => {
+    root.dataset.theme = isDark() ? 'light' : 'dark';
+    try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+    showTheme();
+  });
+  systemDark.addEventListener('change', showTheme);
+  showTheme();
+  themeBtn.hidden = false;
+})();
+</script>
 </body>
 </html>
