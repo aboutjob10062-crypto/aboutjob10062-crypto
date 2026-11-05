@@ -8,6 +8,9 @@
 
 **Aspiring AI Product Manager** · 企業管理 × 資訊工程雙主修 · 前新創公司產品助理
 
+<a href="mailto:aboutjob10062@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+<a href="https://www.linkedin.com/in/liaowilly"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge" /></a>
+
 </div>
 
 ---
@@ -33,6 +36,42 @@
 **接下來**
 
 課程結束後，我想投入 **AI 產品**相關的工作。如果你的團隊需要一個懂商業、也能跟工程師溝通的 PM，歡迎找我聊聊。
+
+---
+
+## 作品集
+
+作品依完成度分區：可以直接體驗的放在精選，還在持續打磨的放在製作中。
+
+<!--
+【精選｜✅ 可 demo】上架條件：作品 README 九段寫完，且截圖、線上體驗、授權聲明為真實內容。
+複製下面這段取消註解，放在這裡，並補上卡片（截圖 + 一句話 + Demo 連結）：
+
+### ⭐ 精選作品
+
+| 作品 | 說明 | 分類 | 技術 | 連結 |
+| --- | --- | --- | --- | --- |
+| [作品名](apps/作品名/) | 一句話說明 | Web App | HTML / JS | [線上體驗](網址) · [原始碼](apps/作品名/) |
+-->
+
+### 🔧 製作中
+
+| 作品 | 說明 | 分類 | 原始碼 | 連結 |
+| --- | --- | --- | --- | --- |
+| 第一步實驗室（暫名） | 協助容易拖延的人開始行動的網頁產品。商業化進行中。 | Web App | 不公開 | [展示卡](apps/first-step-lab/) |
+
+<!--
+【靈感池｜🌱 構想】預設收合。要啟用時取消註解：
+
+<details>
+<summary>🌱 靈感池（點開看構想中的作品）</summary>
+
+| 作品 | 說明 | 分類 |
+| --- | --- | --- |
+| [作品名](music/作品名/) | 一句話說明 | 音樂創作 |
+
+</details>
+-->
 
 ---
 
