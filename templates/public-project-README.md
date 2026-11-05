@@ -1,5 +1,5 @@
 <!--
-公開作品的 README 範本（放在 works/<分類>/<作品名>/README.md）
+公開作品的 README 範本（放在 <分類>/<作品名>/README.md，分類資料夾是 apps、games、tools、art、music、videos）
 - 最上面的「狀態」行是首頁分區用的：構想 / 製作中 / 可 demo
 - 升級到首頁「精選」的門檻：9 段全部寫完，且「網站截圖」「線上體驗」「授權聲明」必須是真實內容
 - 製作中的作品，還沒有的段落寫「尚未提供」即可
@@ -42,4 +42,4 @@
 
 ## 授權聲明
 
-本作品採用 MIT 授權，詳見 repo 根目錄的 [LICENSE](../../../LICENSE)。
+本作品採用 MIT 授權，詳見 repo 根目錄的 [LICENSE](../../LICENSE)。

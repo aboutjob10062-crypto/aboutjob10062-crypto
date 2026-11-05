@@ -13,7 +13,7 @@
 | 欄位 | 內容 |
 |---|---|
 | 目的與效益 | 招募人員與合作對象難以在短時間判斷廖煒立的能力，因為作品分散、完成度不一；廖煒立自己也怕半成品拉低印象、商業內容被誤公開。本設計用「展示櫃 repo + 分區呈現 + 公私分界」同時解決這三件事（對應三句 User Story）。 |
-| 範疇 In / Out | **In**：①`works/` 四個分類資料夾（web-apps、websites、music、research）；②三份 README 範本（公開作品 9 段、私有專案 10 段、商業展示卡）；③首頁 README 的「作品集」區（精選／製作中／靈感池三區）；④第一步實驗室公開展示卡；⑤MIT 授權；⑥`.gitignore` 公私分界規則；⑦把 PDF《個人網站與面試系統技術架構盤點》的內容整理進 `index.html` 的技術內容區。<br>**Out**：實際上傳各作品（第一批清單未定）；商業化作品的私人 repo 建立與遠端設定；音樂音檔上傳；自動產生 README 作品表的腳本；GitHub Pages 部署設定。 |
+| 範疇 In / Out | **In**：①根目錄的分類資料夾 `about`（含 `images/`）、`apps`、`games`、`tools`、`art`、`music`、`videos`、`assets`（依使用者 2026-11-05 提供的目錄圖），每個分類資料夾有簡短 README；②三份 README 範本（公開作品 9 段、私有專案 10 段、商業展示卡）；③首頁 README 的「作品集」區（精選／製作中／靈感池三區）；④第一步實驗室公開展示卡；⑤MIT 授權；⑥`.gitignore` 公私分界規則；⑦把 PDF《個人網站與面試系統技術架構盤點》的內容整理進 `index.html` 的技術內容區。<br>**Out**：實際上傳各作品（第一批清單未定）；商業化作品的私人 repo 建立與遠端設定；音樂音檔上傳；自動產生 README 作品表的腳本；GitHub Pages 部署設定。 |
 | 使用情境 | 招募人員：在公司電腦（桌機）或手機上，從履歷或 LinkedIn 點進 GitHub 首頁快速掃描，目的是決定要不要約面試（Claude 的判斷：裝置與時機）。合作對象：從推薦或搜尋點進來，想看作品與聯絡方式（Claude 的判斷）。廖煒立：在 Windows 桌機用 Claude Code 分批整理與上傳。 |
 | 驗收標準 | 見下方 AC1–AC10。 |
 | 限制條件 | GitHub 免費帳號：私人 repo 可用，Pages 需公開 repo。已 push 的內容幾乎收不回，因此商業內容必須在第一次 push 前就隔離。MIT 授權公開後不可撤回。預算 0。時程：沒有固定日期，分批上傳，第一批時間待定（使用者說法：「現在就可以上傳一些了」）。 |
@@ -21,9 +21,9 @@
 
 ### 驗收標準
 
-- **AC1**：repo 根目錄含 `README.md`、`LICENSE`、`.gitignore`、`index.html`、`works/`、`templates/`；`works/` 底下恰有 `web-apps`、`websites`、`music`、`research` 四個資料夾。
+- **AC1**：repo 根目錄含 `README.md`、`LICENSE`、`.gitignore`、`index.html`、`templates/`；根目錄恰有 `about`、`apps`、`games`、`tools`、`art`、`music`、`videos`、`assets` 八個分類資料夾，`about/` 底下有 `images/`，且沒有 `works/` 資料夾。
 - **AC2**：執行 `git ls-files` 的結果不含 `.superpowers/`、`.remember/`、`.taste-skill/`、`dev-flow-package/`，也不含任何 `.env*`（`.env.example` 除外）。
-- **AC3**：在 `git ls-files` 列出的檔案中搜尋「第一步」與「first-step」，只出現在 `README.md`、`.gitignore`（防護規則）、`works/research/first-step-lab/README.md` 與 `docs/superpowers/` 底下的設計、計畫、證據 `.md` 文件；且 `docs/` 底下只有 `superpowers/` 的 `.md` 檔，沒有 PDF、圖片或其他商業文件。（Claude 的判斷：判準用「檔名＋關鍵字」，並在 `.gitignore` 同時擋中英文檔名。）
+- **AC3**：在 `git ls-files` 列出的檔案中搜尋「第一步」與「first-step」，只出現在 `README.md`、`.gitignore`（防護規則）、`apps/first-step-lab/README.md` 與 `docs/superpowers/` 底下的設計、計畫、證據 `.md` 文件；且 `docs/` 底下只有 `superpowers/` 的 `.md` 檔，沒有 PDF、圖片或其他商業文件。（Claude 的判斷：判準用「檔名＋關鍵字」，並在 `.gitignore` 同時擋中英文檔名。）
 - **AC4**：首頁 README 作品表中，每個作品都標有「構想／製作中／可 demo」其中一個狀態。
 - **AC5**：「精選」區只在至少有一個達標作品時才顯示（沒有達標作品時整區隱藏，不放佔位列）；被放進「精選」區的作品，其 README 九段標題齊全，且「網站截圖」「線上體驗」「授權聲明」三段不是「尚未提供」。
 - **AC6**：展示卡不含「技術架構」「環境設定」「資安與權限管理」「專案結構」任一段落標題，且「原始碼」欄為「不公開」。
@@ -36,7 +36,7 @@
 
 | 需求 | 對應驗收 | 優先 |
 |---|---|---|
-| 目錄架構與 `.gitkeep`（works/、templates/） | AC1 | 必須 |
+| 目錄架構（八個分類資料夾與 `about/images/`、`templates/`） | AC1 | 必須 |
 | `.gitignore` 公私分界、商業內容隔離 | AC2、AC3 | 必須 |
 | 第一步實驗室展示卡（不含內部細節） | AC3、AC6 | 必須 |
 | MIT 授權檔 | AC1 | 必須 |
@@ -67,7 +67,9 @@
 ## 5. Claude 的判斷（請檢查）
 
 - 展示卡一句簡介：「協助容易拖延的人開始行動的網頁產品」。
-- 展示卡放在 `works/research/`（商業研究）。
+- 展示卡放在 `apps/first-step-lab/`（它是網頁產品；新架構沒有 `research/`，分類欄寫 Web App）。
+- 每個分類資料夾放一份簡短 README，內容取自目錄圖的「各資料夾簡介」。
+- `about/images/` 的個人照片存放方式尚未決定（見第 6 節未決事項 3），已決定放公開 repo（見未決事項 3）。
 - MIT 持有人寫 Willy Liao（取自首頁 README）。
 - 技術內容區放在 `index.html` 的工具箱區塊之後、FAQ 之前，做成獨立區塊，不直接內嵌 PDF 檔。
 - 技術內容區的呈現：保留 PDF 的三層分層（前端、無伺服器、資料）與決策對照表，改寫成網頁段落與表格。
@@ -82,6 +84,12 @@
 
 1. ~~PDF 描述的架構與目前 `index.html` 不一致~~ → **已解決**：使用者選「只寫現況」，見第 4 節。下方對照表保留作為不寫入的項目清單。
 2. 第一批要上傳的作品清單（不影響這份設計，上傳作業本身這次不做）。
+3. **個人照片要「放在私人處、同時能在個人網頁 demo」**：網頁上看得到的圖片，任何訪客都能下載，無法真正隱藏；可行的是「檔案不放進公開 repo、改由外部服務提供網址」。照片 `assets/willy.jpg` 目前在本機分支 `c4b342c` 的歷史裡、尚未推送到任何遠端；`index.html` 的大頭照目前是會在 2026-11-18 到期的 LinkedIn 簽名連結。**使用者決定（2026-11-05）：先放進公開 repo**，接受照片公開；照片搬到 `about/images/willy.jpg`，`index.html` 五處 LinkedIn 連結改為本機檔案。
+4. **首頁怎麼處理**：目錄圖的根 `index.html` 是作品集首頁、`about/index.html` 是個人簡介網頁。這次只建資料夾，現有 `index.html` 不動；新首頁與搬移個人簡介網頁另案處理（會牽動網址、`sitemap.xml`、`llms.txt` 與證據表行號）。
+
+## 變更紀錄
+
+- 2026-11-05：使用者提供目錄圖，要求把架構調整成圖上的樣子並先建資料夾。`works/{web-apps,websites,music,research}` 改為根目錄的八個分類資料夾；`websites` 取消；展示卡搬到 `apps/first-step-lab/`。已核准的計畫文件記錄的是當時的執行過程，不隨之修改。
 
 ### 未決事項 1 的細節
 

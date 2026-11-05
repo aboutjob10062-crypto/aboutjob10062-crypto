@@ -34,5 +34,6 @@
 | c14 | 階段由 setTimeout 排程 | 1058 | `setTimeout(` |
 | c15 | 字型來自 Fontshare | 122 | `api.fontshare.com` |
 | c15 | 字型來自 Google Fonts | 125 | `fonts.googleapis.com/css2` |
-| c15 | 大頭照是外部連結 | 558 | `media.licdn.com` |
+| c15 | 校園照片是外部連結（維基共享資源） | 616 | `upload.wikimedia.org` |
+| c15 | 另一張校園照片是外部連結 | 872 | `upload.wikimedia.org` |
 | c15 | 背景音樂是外部連結 | 581 | `img.ai365.fans` |
