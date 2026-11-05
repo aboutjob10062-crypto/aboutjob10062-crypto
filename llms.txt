@@ -1,0 +1,36 @@
+# 廖煒立 Willy Liao
+
+> 游走於商業策略與技術實作之間的產品人。國立臺灣師範大學企業管理學系與資訊工程學系雙主修，專注探索 AI 技術如何結合產品設計。正在尋找 AI 產品經理（AI PM）、軟體產品經理或早期產品企劃的機會。
+
+## 基本資料
+
+- 姓名：廖煒立（Willy Liao，暱稱 Willy）
+- 求職方向：AI 產品經理（AI PM）、軟體產品經理、早期產品企劃
+- 學歷：國立臺灣師範大學 企業管理學系 × 資訊工程學系 雙主修
+- 語言：中文；英文（多益 860 分金色證書）
+- 證照：Bubble Developer Certification（官方認證）
+- 聯絡：aboutjob10062@gmail.com
+- LinkedIn：https://www.linkedin.com/in/liaowilly
+- GitHub：https://github.com/aboutjob10062-crypto
+
+## 工作與專案成果
+
+- 戀結科技 產品助理：用團隊既有 Design System 在 Figma 搭建 Low-fi / Mid-fi Wireframe 與操作流程，取代文字規格，把前期需求規劃到工程進場對齊的時間從 7 天壓縮到 2 天。
+- 戀結科技 產品助理：主導潛在客群訪談研究，1 個月內為平台鎖定 2 個核心使用群體及其痛點；規劃內部管理後台與數據儀表板，定義關鍵指標與漏斗分析。
+- 品質把關：把老闆的商業目標拆解為 User Story 與 Goal，用 Jira 看板定義預期結果，並親自執行全流程 QA 測試。
+- 數位行銷顧問實習：梳理網頁遊戲化流程、推動 2 項企業輔導專案落地，並促成海外市場策略合作。
+- 主導超過 6 份跨產業產學合作提案；商業企劃書獲校內創業競賽第 2、3 名。
+- 大學期間擔任 3 個軟體創業專案（Caty、Lumi、Moodster）負責人，主導市場需求調研、商業企劃提案與第一版 MVP 原型驗證；曾媒合 3 位企業執行長擔任團隊導師。
+
+## AI 與 No-Code 能力
+
+- AI 原型開發：Google AI Studio、Vibe Coding（例：結合呼吸冥想引導的番茄鐘待辦工具、AI 穿搭辨識與單品推薦雛形）
+- 自動化：用 Apps Script 建置每日科技商業新聞 AI 自動化情報流
+- No-Code 與 API：Bubble；串接 OpenAI、Gemini、Google Map API
+- AI 用戶研究：Whisper、NotebookLM（曾將 20 多位受訪者的質化訪談轉為結構化知識庫）
+- 產品管理：需求探索與用戶訪談、商業企劃書（BP）、Wireframe 與 UI/UX 流程（Figma）、敏捷專案管理與測試追蹤（Jira）、後台系統與數據指標規劃
+
+## 頁面
+
+- [作品集首頁](https://aboutjob10062-crypto.github.io/aboutjob10062-crypto/)：七個分類與各自的狀態
+- [個人簡介](https://aboutjob10062-crypto.github.io/aboutjob10062-crypto/about/)：完整介紹、常見問題與預約面試表單
