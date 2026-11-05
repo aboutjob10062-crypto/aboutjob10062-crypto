@@ -1,0 +1,20 @@
+# 工具與 AI 工作資料（不公開）
+.superpowers/
+.remember/
+.taste-skill/
+
+# 環境變數與金鑰（任何情況都不進版控）
+.env
+.env.*
+!.env.example
+
+# 依賴與建置產物
+node_modules/
+dist/
+
+# 不打算公開的工具包
+dev-flow-package/
+
+# 商業化作品的內容不進這個公開 repo（原始碼與文件在各自的私人專案）
+docs/first-step*
+docs/第一步*
