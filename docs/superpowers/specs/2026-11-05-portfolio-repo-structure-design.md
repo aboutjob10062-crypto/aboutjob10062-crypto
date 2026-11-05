@@ -1,6 +1,6 @@
 # 作品集 GitHub 目錄架構設計
 
-日期：2026-11-05　｜　狀態：草稿，待使用者確認
+日期：2026-11-05　｜　狀態：已核准（使用者 2026-11-05）
 
 ## 1. User Story
 
@@ -23,7 +23,7 @@
 
 - **AC1**：repo 根目錄含 `README.md`、`LICENSE`、`.gitignore`、`index.html`、`works/`、`templates/`；`works/` 底下恰有 `web-apps`、`websites`、`music`、`research` 四個資料夾。
 - **AC2**：執行 `git ls-files` 的結果不含 `.superpowers/`、`.remember/`、`.taste-skill/`、`dev-flow-package/`，也不含任何 `.env*`（`.env.example` 除外）。
-- **AC3**：在 `git ls-files` 列出的檔案中搜尋「第一步」與「first-step」，只出現在 `README.md`、`works/research/first-step-lab/README.md` 與本設計文件；且 `docs/` 底下只有 `superpowers/specs/` 的 `.md` 檔，沒有 PDF、圖片或其他商業文件。（Claude 的判斷：判準用「檔名＋關鍵字」，並在 `.gitignore` 同時擋中英文檔名。）
+- **AC3**：在 `git ls-files` 列出的檔案中搜尋「第一步」與「first-step」，只出現在 `README.md`、`.gitignore`（防護規則）、`works/research/first-step-lab/README.md` 與 `docs/superpowers/` 底下的設計、計畫、證據 `.md` 文件；且 `docs/` 底下只有 `superpowers/` 的 `.md` 檔，沒有 PDF、圖片或其他商業文件。（Claude 的判斷：判準用「檔名＋關鍵字」，並在 `.gitignore` 同時擋中英文檔名。）
 - **AC4**：首頁 README 作品表中，每個作品都標有「構想／製作中／可 demo」其中一個狀態。
 - **AC5**：「精選」區只在至少有一個達標作品時才顯示（沒有達標作品時整區隱藏，不放佔位列）；被放進「精選」區的作品，其 README 九段標題齊全，且「網站截圖」「線上體驗」「授權聲明」三段不是「尚未提供」。
 - **AC6**：展示卡不含「技術架構」「環境設定」「資安與權限管理」「專案結構」任一段落標題，且「原始碼」欄為「不公開」。
@@ -43,7 +43,7 @@
 | 首頁 README 的作品集三區與狀態欄 | AC4 | 應該 |
 | 三份 README 範本 | AC5、AC6 | 應該 |
 | 首頁 README 的聯絡方式置頂 | AC7 | 應該 |
-| `index.html` 技術內容區（PDF 內容整理） | AC8、AC9、AC10 | 應該（前提：先釐清下方未決事項 1） |
+| `index.html` 技術內容區（只寫現況，依 PDF 整理） | AC8、AC9、AC10 | 應該 |
 | 自動產生首頁作品表的腳本 | — | 可以 |
 | 靈感池收合區實際啟用 | AC4 | 可以 |
 | 實際上傳各作品、私人 repo 遠端設定、音檔上傳、Pages 部署 | — | 這次不做 |
@@ -62,7 +62,7 @@
 - 公開作品授權不設限（Claude 對應為 MIT）。
 - 音樂不放音檔（Claude 提議，使用者未反對）。
 - `dev-flow-package/` 不公開。
-- 要把 PDF 的技術內容放進 `index.html` 的技術內容區。
+- 要把 PDF 的技術內容放進 `index.html` 的技術內容區，**只寫網站目前實際有的內容**（使用者 2026-11-05 確認）：PDF 裡 `index.html` 還沒實作的項目（Apps Script 與 Google Sheets 寫入、`no-cors`、`ai-content-summary`、`<details>` FAQ、效能數字、「已驗證上線」）不寫，也不為了對齊 PDF 而修改網站功能。
 
 ## 5. Claude 的判斷（請檢查）
 
@@ -80,7 +80,7 @@
 
 ## 6. 未決事項（交給使用者）
 
-1. **PDF 描述的架構與目前 `index.html` 不一致**（見下方）。技術內容區是「只寫網站現在的樣子」，還是「要把網站改成跟 PDF 一致」？在使用者回答前，預設做法是只寫現況，其餘不寫或標「規劃中」，也不改網站功能。
+1. ~~PDF 描述的架構與目前 `index.html` 不一致~~ → **已解決**：使用者選「只寫現況」，見第 4 節。下方對照表保留作為不寫入的項目清單。
 2. 第一批要上傳的作品清單（不影響這份設計，上傳作業本身這次不做）。
 
 ### 未決事項 1 的細節
